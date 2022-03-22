@@ -55,6 +55,10 @@ function submitGuess(guess) {
     guessCount++;
 }
 
+function displaySolution() {
+    document.getElementById("warning").innerHTML = "Solution: " + solution;
+}
+
 function submitClicked() {
     let guess = document.getElementById("guessbox").value.toUpperCase();
     if (guessCount >= 6) {
@@ -68,6 +72,10 @@ function submitClicked() {
     } else {
         tooManyLetters();
     }
+
+    if (guessCount >= 6) {
+        displaySolution();
+    } 
 
 }
 
