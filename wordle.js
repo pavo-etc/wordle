@@ -61,10 +61,11 @@ function submitClicked() {
     if (guessCount >= 5) {
         maxGuesses();
     } else if (guess.length === 5) {
-        if (valid_guess_words.includes(toLowerCase())) {
-
+        if (valid_guess_words.includes(guess.toLowerCase())) {
+            submitGuess(guess);
+        } else {
+            notRealWord();
         }
-        submitGuess(guess);
     } else {
         tooManyLetters();
     }
