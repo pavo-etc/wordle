@@ -36,7 +36,7 @@ function formatResults(guess, results) {
 }
 
 function maxGuesses() {
-    document.getElementById("warning").innerHTML = "Max 5 guesses!";
+    document.getElementById("warning").innerHTML = "Max 6 guesses!";
 }
 
 function tooManyLetters() {
@@ -57,7 +57,7 @@ function submitGuess(guess) {
 
 function submitClicked() {
     let guess = document.getElementById("guessbox").value.toUpperCase();
-    if (guessCount >= 5) {
+    if (guessCount >= 6) {
         maxGuesses();
     } else if (guess.length === 5) {
         if (validGuessWords.includes(guess.toLowerCase())) {
