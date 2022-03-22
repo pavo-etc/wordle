@@ -18320,7 +18320,7 @@ zonal
 `;
 
 window.addEventListener('keyup', function (e) {
-    if (e.keyCode === 13) {
+    if (e.key === 'Enter') {
        let button = document.getElementById("submitButton");
        button.click();
        document.getElementById("guessbox").value = "";
