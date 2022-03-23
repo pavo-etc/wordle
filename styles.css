@@ -1,16 +1,7 @@
-body {    
-    margin: 1rem;
-    text-align: center;
-    font-family: sans-serif;
-    color: var(--white);
-    background-color: var(--background);
-}
-
 .output-box {
     font-family: monospace;
     font-size: xx-large;
 }
-
 
 .green {
     background-color: darkgreen;
