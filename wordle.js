@@ -20,16 +20,19 @@ function checkGuess(target, guess) {
 }
 
 function formatResults(guess, results) {
-    let formattedHTML = "";
+    let formattedHTML = document.createElement('tr');
 
     results.forEach((e, i)=>{
+        let letter = document.createElement("td");
+        letter.innerText = guess.charAt(i)
         if (e === 0) {
-            formattedHTML += '<span class="red">'+guess.charAt(i)+'</span> ';
+            letter.className = "red";
         } else if (e === 1) {
-            formattedHTML += '<span class="yellow">'+guess.charAt(i)+'</span> ';
+            letter.className = "yellow";
         } else if (e === 2) {
-            formattedHTML += '<span class="green">'+guess.charAt(i)+'</span> ';
+            letter.className = "green";
         }
+        formattedHTML.appendChild(letter)
     })
 
     return formattedHTML;
@@ -49,7 +52,8 @@ function notRealWord() {
 
 function submitGuess(guess) {
     let results = checkGuess(solution, guess.toUpperCase());
-    document.getElementById("pastGuesses").innerHTML += formatResults(guess, results) + "<br><br>";
+    document.getElementById("past-guesses").appendChild(formatResults(guess, results));
+
     console.log(results);
     document.getElementById("warning").innerHTML = "";
     guessCount++;
