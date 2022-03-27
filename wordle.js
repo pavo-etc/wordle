@@ -76,7 +76,7 @@ function submitClicked() {
     if (guessCount >= 6) {
         displaySolution();
     } 
-
+    document.getElementById("guessbox").value = "";
 }
 
 let guessCount = 0;
@@ -18323,7 +18323,6 @@ window.addEventListener('keyup', function (e) {
     if (e.key === 'Enter') {
        let button = document.getElementById("submitButton");
        button.click();
-       document.getElementById("guessbox").value = "";
     }
   }, false);
 
