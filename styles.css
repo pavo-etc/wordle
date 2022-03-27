@@ -1,5 +1,4 @@
 .output-box {
-    font-family: monospace;
     font-size: xx-large;
 }
 
@@ -18,6 +17,8 @@
     color: white;
 }
 
-.td {
-    border: 1px solid black;
+td {
+    height: 2em;
+    width:2em;
+    text-align: center;
 }
